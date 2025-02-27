@@ -1,0 +1,9 @@
+sitemap: https://collegevidya.com/sitemap.xml
+User-agent: *
+Disallow: /*.pdf$
+Disallow:
+
+
+#URL parameters blocking for SEO
+Disallow: /*/search={search_query}/
+Disallow: /*search={search_query}

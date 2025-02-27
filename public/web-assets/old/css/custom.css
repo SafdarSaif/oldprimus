@@ -1,0 +1,183 @@
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+p{
+    color: #111;
+}
+.w_180{
+    width: 180px;
+}
+.w_100{
+    width: 125px !important;
+}
+.w_1{
+    width: 100px !important;
+}
+.f_20{
+    font-size: 20px;
+}
+
+/* .template-btn{
+    padding: 5px 25px !important;
+} */
+.hm2-dm-search-form input{
+    padding: 6px 10px 7px 20px;
+}
+.dm-info-single h4
+{
+    font-size: 15px;
+}
+.nav-wrapper ul li.has-submenu.has-megamenu-list .submenu-wrapper .new{
+    left: 65px;
+}
+@media (min-width: 1200px){
+.display-3 {
+    font-size: 3rem;
+}
+}
+@media (max-width: 575.98px){
+.dm-support-info a {
+    font-size: 12px;
+    padding: 12px 20px !important;
+}
+}
+.hm-contact-form .input-field select {
+    width: 100%;
+    padding: 15px 20px 10px 20px;
+    font-size: 14px;
+    color: #656565;
+    border: 1px solid #e7e7e7;
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.mtn-100{margin-top: -100px;}
+.text-justify{
+    text-align: justify;
+}
+
+.new_uni{
+    padding: 45px 30px;
+    position: absolute;
+    bottom: 48px;
+    z-index: 2;
+}
+.w_260{
+    width: 210px;
+    height: 70px;
+}
+.h4-apps-box {
+    padding: 10px 5px ;
+}
+
+.bg_b{
+    background: #ebf5fe;
+}
+.certificate_width{
+    width: 600px;
+    height: 400px;
+}
+.w_28{
+    width:28px;
+}
+.f-1-5{
+    font-size: 1.1em;
+}
+.logo_unidetails{
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+.nav-wrapper ul li.has-submenu.has-megamenu-list .submenu-wrapper>li a {
+    background: #f6f6f6;
+    margin-bottom: 5px;}
+
+    .blog_img{
+        height: 200px;
+    width: 420px;
+    }
+.two_em{
+    font-size:2rem !important;
+}
+.signup-area .signup-form{
+    padding: 20px;
+}
+.pop_up_img{
+    width: 120px;
+}
+.pop_up_img_whatsapp{
+    width: 40px;
+}
+.signup-form-wrapper form select{width:100%;
+    padding:12px 15px 12px 40px;
+    border:1px solid rgba(221,221,221,.485);margin-top:6px;border-radius:4px;position:relative}
+
+.sideapplybutton{
+    transform: rotate(90deg);
+    min-width: 134px;
+    left: 13px;
+    margin-left: -35px;
+}
+.counter_img{
+    width: 60px;
+}
+.card_term{
+    border: none !important;
+    margin-bottom: 20px !important;
+}
+.card_term_font{
+    font-size: 1.3rem;
+}
+.number {
+    position: absolute;
+    font-size: 10px;
+    top: -10px;
+    width: 28px;
+    height: 15px;
+    background: #ff0866;
+    border-radius: 25%;
+    right: 4px;
+    text-align: center;
+    color: #fff;
+}
+.counter_abroad{
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+}
+.form_abroad{
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+@media screen and (min-width: 300px) and (max-width: 767px){
+.width_50{
+    width: 50%;
+}
+.hm7-domain-content{
+    padding: 30px 0;
+}
+
+.template-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+.ddd h2{
+    font-size: 1.4rem;
+}
+.hh{
+    padding-bottom: 0px;
+}
+.number{
+    top: 14px;
+    left: 100px;
+}
+.logo {
+    max-width: 110px;
+}
+}
+

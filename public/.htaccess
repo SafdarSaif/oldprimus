@@ -1,0 +1,128 @@
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+   RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Send Requests To Front Controller...
+     RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+	
+	 # DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:ftattestation.com
+RewriteBase /
+rewritecond %{http_host} ^primusvidya.com [nc]
+rewriterule ^(.*)$ http://www.primusvidya.com/$1 [r=301,nc]
+# TN START GZIP COMPRESSION
+
+<IfModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+mod_gzip_item_include handler ^cgi-script$
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</IfModule>
+
+# TN END GZIP COMPRESSION
+
+##### 1 Month for most static resources
+# <filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+#     Header set Cache-Control "max-age=2592000, public"
+# </filesMatch>
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+  Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+# <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#   Header set Cache-Control "max-age=86400, public"
+# </FilesMatch>
+
+
+# TN START DEFLATE COMPRESSION
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE “application/atom+xml” \
+“application/javascript” \
+“application/json” \
+“application/ld+json” \
+“application/manifest+json \
+“application/rdf+xml” \
+“application/rss+xml” \
+“application/schema+json” \
+“application/vnd.geo+json” \
+“application/vnd.ms-fontobject” \
+“application/x-font” \
+application/x-font-opentype” \
+“application/x-font-otf” \
+“application/x-font-truetype \
+“application/x-font-ttf \
+“application/x-javascript \
+“application/x-web-app-manifest+json” \
+“application/xhtml+xml \
+“application/xml \
+“font/eot” \
+“font/otf” \
+font/ttf” \
+“font/opentype \
+“image/bmp” \
+“image/svg+xml” \
+“image/vnd.microsoft.icon” \
+“image/x-icon \
+“text/cache-manifest” \
+text/css” \
+“text/html” \
+“text/javascript” \
+“text/plain” \
+“text/vcard” \
+text/vnd.rim.location.xloc” \
+text/vtt” \
+“text/x-component” \
+“text/x-cross-domain-policy” \
+“text/xml”
+</IfModule>
+
+# END DEFLATE COMPRESSION
+
+# cache policy
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+ # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/svg "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType text/js "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
